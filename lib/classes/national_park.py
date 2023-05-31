@@ -35,7 +35,7 @@ class NationalPark:
         max_visitor = None
         max_visits = 0
         for visitor in self._visitors:
-            visitor_visits = len([time for time in self._trips if time.visitor == visitor])
+            visitor_visits = len([trip for trip in self._trips if trip.visitor == visitor])
             if visitor_visits > max_visits:
                 max_visits = visitor_visits
                 max_visitor = visitor
